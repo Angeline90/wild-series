@@ -3,5 +3,13 @@
 {% block title %}Wild Series{% endblock %}
 
 {% block body %}
-<h1>{{ home }}</h1>
+    <h1>{{ home }}</h1>
+
+    <a href="{{ path('program_index') }}">
+        Liste des programmes
+    </a><br>
+     <a href="{{ path('category_index') }}">
+        Liste des catégories
+    </a>
+
 {% endblock %}
