@@ -42,7 +42,9 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
         'category' => 'Drame',],
 
         [ 'title' => 'Friends',
-        'synopsis' => "série marrante",
+        'synopsis' => "Dans les rues animées de New York, un groupe de six amis se lance dans des péripéties hilarantes, 
+            créant des situations loufoques et des dialogues pleins d'esprit qui illuminent leur quotidien et renforcent 
+            leurs liens indéfectibles.",
         'category' => 'Humour',],
     
     ];

@@ -10,12 +10,12 @@
             <p>{{ program.synopsis }}</p>
             <p>Catégorie : {{ program.category.name }}</p>
             <h3>Saison {{ season.number }}</3>
-            <p> {{season.id}}</p>
-            {# {% dump(season.episodes) %} #}
+
             {% if not season.episodes is empty %}
                 <ul>
                     {% for episode in season.episodes %}
                         <li>{{ episode.number }} . {{ episode.title }}</li>
+                        <p>{{ episode.synopsis }}</p>
                     {% endfor %}
                 </ul>
             {% else %}
