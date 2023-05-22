@@ -14,8 +14,11 @@
             {% if not season.episodes is empty %}
                 <ul>
                     {% for episode in season.episodes %}
-                        <li>{{ episode.number }} . {{ episode.title }}</li>
-                        <p>{{ episode.synopsis }}</p>
+                        
+                        <a href="{{ path('program_episode_show', 
+                            {programId: program.id, seasonId: season.id, episodeId: episode.id}) }}">
+                            <li>{{ episode.title }}</li>
+                        </a>    
                     {% endfor %}
                 </ul>
             {% else %}
@@ -26,6 +29,6 @@
 
     <a href="{{ path('program_index') }}">
         Retour à la liste des programmes
-    </a>
+    </a><br>
 
 {% endblock %}
