@@ -40,6 +40,11 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
             pour subvenir aux besoins de sa famille, mais sa transformation en criminel le met en danger et 
             bouleverse sa vie de manière inattendue dans cette série dramatique à suspense.",
         'category' => 'Drame',],
+
+        [ 'title' => 'Friends',
+        'synopsis' => "série marrante",
+        'category' => 'Humour',],
+    
     ];
 
     public function load(ObjectManager $manager): void
@@ -50,6 +55,7 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
             $program->setSynopsis($activeProgram['synopsis']);
             $program->setCategory($this->getReference('category_' . $activeProgram['category']));
             $manager->persist($program);
+            $this->addReference('program_' . $activeProgram['title'], $program);
         }
 
         $manager->flush();
